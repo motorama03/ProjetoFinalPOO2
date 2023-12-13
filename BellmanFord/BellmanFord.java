@@ -2,14 +2,18 @@ package BellmanFord;
 
 import java.util.List;
 
-import graph.Edge;
 import graph.Graph;
 import graph.Vertex;
 
 public class BellmanFord {
 	
 	private static BellmanFord bellmanFord;
+	private Graph gp;
 	
+	// Sin
+	private BellmanFord() {
+        this.gp = new Graph(true);
+    }	
 	/**
 	 * Metodo responsavel por encontrar um caminho de custo mínimo de um vertice de origem a todos os demais, seu diferencial em comparacao a Dijkstra é que ele pode conter valores negativos.
 	 * @param gp Graph
